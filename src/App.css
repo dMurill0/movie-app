@@ -8,6 +8,7 @@ body {
   list-style-type: none;
   outline: none;
   background-image: url("./images/image.jpg");
+  background-position: center;
 }
 .container {
   width: 100%;
@@ -21,4 +22,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 0.2em;
   justify-content: center;
+}
+h2 {
+  background-color: antiquewhite;
 }
