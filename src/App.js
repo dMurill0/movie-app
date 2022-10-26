@@ -25,7 +25,7 @@ function App() {
     e.preventDefault();
     console.log("Searching");
     try {
-      const url = `https://api.themoviedb.org/3/movie/76341?api_key=1976c380dd1c386feb7c2778eef34284&query=${query}`;
+      const url = `https://api.themoviedb.org/3/search/movie?api_key=1976c380dd1c386feb7c2778eef34284&query=${query}`;
       const res = await fetch(url);
       const data = await res.json();
       console.log(data);
@@ -43,8 +43,10 @@ function App() {
     <>
       <Navbar bg="dark" expand="lg" variant="dark">
         <Container fluid>
-          <Navbar.Brand href="/home">MovieDb App</Navbar.Brand>
-          <Navbar.Brand href="/home">Populares</Navbar.Brand>
+          <nav className="navbar navbar-light bg-light">
+            <img src="../images/logo.png" alt="logo" height="50px" width="70px" />
+          </nav>
+
           <Navbar.Toggle aria-controls="navbarScroll"></Navbar.Toggle>
 
           <Navbar.Collapse id="nabarScroll">
