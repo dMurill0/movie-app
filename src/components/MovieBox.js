@@ -10,11 +10,13 @@ const MovieBox = ({ title, poster_path, vote_average, release_date, overview }) 
     return (
         <div className='card text-center bg-secondary mb-3'>
             <div className='card-body'>
-                {API_IMG + poster_path == null ? (
-                    console.log(API_IMG + poster_path)
-                ) : (
-                    <img className='card-img-top' src={API_IMG + poster_path} alt="" />
-                )}
+                {
+                    API_IMG + poster_path === null ? (
+
+                        console.log("null")
+                    ) : (
+                        <img className='card-img-top' src={API_IMG + poster_path} alt="" />
+                    )}
 
                 <div className='card-body'>
                     <button type='button' className='btn btn-info' onClick={handleShow}>Ver más</button>
@@ -23,12 +25,12 @@ const MovieBox = ({ title, poster_path, vote_average, release_date, overview }) 
                             <Modal.Title></Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
-                            <img className='card-img-top' src={API_IMG + poster_path} alt="" />
+                            <img className='card-img-top' src={API_IMG + poster_path} alt="poster" />
                             <h3>{title}</h3>
-                            <h4>ImDb: {vote_average}</h4>
-                            <h5>Fecha de Salida: {release_date}</h5>
+                            <span><img src='../images/imdb.png' height="50px" width="60px" alt='imdb' /> {vote_average}</span>
+                            <h5>Fecha de Salida: </h5><p>{release_date}</p>
                             <br></br>
-                            <h6>{overview}</h6>
+                            <p>{overview}</p>
                         </Modal.Body>
                         <Modal.Footer>
                             <Button variant="info" onClick={handleClose}>Cerrar</Button>

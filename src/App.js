@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Container, Nav, Form, FormControl, Button } from 'react-bootstrap';
 
 const API_URL = "https://api.themoviedb.org/3/movie/popular?api_key=1976c380dd1c386feb7c2778eef34284&language=es";
-const API_SEARCH = "https://api.themoviedb.org/3/search/movie?api_key=1976c380dd1c386feb7c2778eef34284&language=es&query";
 function App() {
 
   const [movies, setMovies] = useState([]);
@@ -43,9 +42,9 @@ function App() {
     <>
       <Navbar bg="dark" expand="lg" variant="dark">
         <Container fluid>
-          <nav className="navbar navbar-light bg-light">
-            <img src="../images/logo.png" alt="logo" height="50px" width="70px" />
-          </nav>
+          <div className='title'>
+            <a href=''><h1>MOVIEDB</h1></a>
+          </div>
 
           <Navbar.Toggle aria-controls="navbarScroll"></Navbar.Toggle>
 
@@ -80,6 +79,12 @@ function App() {
           <h2>Sorry !! No Movies Found</h2>
         )}
       </div>
+      <footer class="text-center text-lg-start bg-dark text-muted">
+        <div class="text-center p-4">
+          © 2022 Copyright:
+          <p class="text-reset fw-bold">Daniel Murillo</p>
+        </div>
+      </footer>
     </>
 
   );
