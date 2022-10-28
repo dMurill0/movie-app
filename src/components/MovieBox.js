@@ -10,13 +10,11 @@ const MovieBox = ({ title, poster_path, vote_average, release_date, overview }) 
     return (
         <div className='card text-center bg-secondary mb-3'>
             <div className='card-body'>
-                {
-                    API_IMG + poster_path === null ? (
 
-                        console.log("null")
-                    ) : (
-                        <img className='card-img-top' src={API_IMG + poster_path} alt="" />
-                    )}
+                <div className='card-img-top'>
+                    <img class='img-fluid' src={API_IMG + poster_path} alt="" />
+                </div>
+
 
                 <div className='card-body'>
                     <button type='button' className='btn btn-info' onClick={handleShow}>Ver más</button>
@@ -27,7 +25,7 @@ const MovieBox = ({ title, poster_path, vote_average, release_date, overview }) 
                         <Modal.Body>
                             <img className='card-img-top' src={API_IMG + poster_path} alt="poster" />
                             <h3>{title}</h3>
-                            <span><img src='../images/imdb.png' height="50px" width="60px" alt='imdb' /> {vote_average}</span>
+                            <span ><img class="img-fluid" src='../images/imdb.png' height="50px" width="60px" alt='imdb' /> {vote_average}</span>
                             <h5>Fecha de Salida: </h5><p>{release_date}</p>
                             <br></br>
                             <p>{overview}</p>
