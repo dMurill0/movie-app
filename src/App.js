@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFilm, faTelevision } from '@fortawesome/free-solid-svg-icons';
 import MovieBox from './components/MovieBox';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Container, Nav, Form, FormControl, Button } from 'react-bootstrap';
 
 const API_URL = "https://api.themoviedb.org/3/movie/popular?api_key=1976c380dd1c386feb7c2778eef34284&language=es";
+const API_URL_TV = "https://api.themoviedb.org/3/tv/popular?api_key=1976c380dd1c386feb7c2778eef34284&language=es-ES&page=1";
 function App() {
 
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState('');
-
+  {
+    //if toggle movies useEffect con API de movies
+  }
   useEffect(() => {
     fetch(API_URL)
       .then((res) => res.json())
@@ -41,6 +46,19 @@ function App() {
     <>
       <Navbar bg="dark" expand="lg" variant="dark">
         <Container fluid>
+          <div className='form-check form-switch'>
+            <div className='icons'>
+              {/* <span><FontAwesomeIcon icon={faFilm} color="white" size='1x' /></span> */}
+              {/* <span><FontAwesomeIcon icon={faTelevision} color="white" size="1x" /></span> */}
+              <img src="./images/movie.png" style={{ height: "30px", boxShadow: "none", marginRight: "5px" }} alt="" />
+              <img src="./images/series.png" style={{ height: "30px", boxShadow: "none" }} alt="" />
+            </div>
+            <div className='inputs'>
+              <input type="checkbox" className="form-check-input" value="" id="check1" />
+              <input type="checkbox" className="form-check-input" value="" id="check2" />
+            </div>
+
+          </div>
           <div className='title'>
             <h1><a className="logo" href='/index.html'>MOVIEDB</a></h1>
           </div>

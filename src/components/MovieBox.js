@@ -11,13 +11,6 @@ const MovieBox = ({ id, title, poster_path, vote_average, release_date, overview
     const handleClose = () => setShow(false);
     const API_SRCHes = "https://api.themoviedb.org/3/movie/${id}?api_key=1976c380dd1c386feb7c2778eef34284&language=es";
 
-    const API_SRCH = "https://api.themoviedb.org/3/movie/${data.id}?api_key=1976c380dd1c386feb7c2778eef34284&language=es"
-
-    // const res = await fetch(API_SRCHes);
-    // const data = await res.json();
-    // const res2 = await fetch(API_SRCH);
-    // const data2 = await res.json();
-
     return (
         <div className='card text-center bg-secondary mb-3'>
             <div className='card-body'>

@@ -47,7 +47,7 @@ p {
 .logo {
   transition: all 1s;
   color: #d1fb37;
-  -webkit-text-stroke: 0.5px #0dcaf0;
+  -webkit-text-stroke: 0.2px #0dcaf0;
 }
 .logo:hover {
   color: #0dcaf0;
@@ -58,4 +58,27 @@ p {
 }
 .no-image {
   box-shadow: none;
+}
+.form-switch {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 0;
+  padding: 0;
+}
+.form-check p {
+  color: white;
+}
+.icons {
+  display: flex;
+  justify-content: flex-start;
+  align-content: space-between;
+}
+.icons span {
+  margin: 3px;
+}
+.inputs {
+  margin-left: 4.5vw;
+}
+.inputs input {
+  background-color: #d1fb37;
 }
