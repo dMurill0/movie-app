@@ -84,10 +84,10 @@ function App() {
           <h2>Sorry !! No Movies Found</h2>
         )}
       </div>
-      <footer class="text-center text-lg-start bg-dark text-muted">
-        <div class="text-center p-4">
+      <footer className="text-center text-lg-start bg-dark text-muted">
+        <div className="text-center p-4">
           © 2022 Copyright:
-          <p class="text-reset fw-bold">Daniel Murillo</p>
+          <h5 className="text-reset fw-bold"  >Daniel Murillo</h5>
         </div>
       </footer>
     </>

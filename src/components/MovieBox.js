@@ -1,5 +1,7 @@
 import { Button, Modal } from 'react-bootstrap';
 import React, { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCalendarDays } from '@fortawesome/free-solid-svg-icons'
 const API_IMG = "https://image.tmdb.org/t/p/w500/";
 
 const MovieBox = ({ id, title, poster_path, vote_average, release_date, overview }) => {
@@ -26,9 +28,22 @@ const MovieBox = ({ id, title, poster_path, vote_average, release_date, overview
                         <Modal.Body>
                             <img className='card-img-top' src={API_IMG + poster_path} alt="poster" />
                             <h3>{title}</h3>
-                            <span><img class="img-fluid" src='../images/imdb.png' height="50px" width="60px" alt='imdb' /> {vote_average}</span>
-                            <h5>Fecha de Estreno: </h5><p>{release_date}</p>
+                            {
+                                vote_average < 5 ? (
+                                    <span style={{ color: "red", fontFamily: "Poppins", fontWeight: "800" }}><img class="img-fluid" src='../images/imdb.png' height="50px" width="60px" alt='imdb' /> {vote_average}</span>
+                                ) : (vote_average < 8 ? (
+                                    <span style={{ color: "blue", fontFamily: "Poppins", fontWeight: "800" }}><img class="img-fluid" src='../images/imdb.png' height="50px" width="60px" alt='imdb' /> {vote_average}</span>
+
+                                ) : (
+                                    <span style={{ color: "green", fontFamily: "Poppins", fontWeight: "800" }}><img class="img-fluid" src='../images/imdb.png' height="50px" width="60px" alt='imdb' /> {vote_average}</span>
+                                ))
+                            }
+
+                            <h5>Fecha de Estreno: </h5><p><span style={{ marginRight: "15px", fontSize: "1.5vw" }}><FontAwesomeIcon icon={faCalendarDays} color="#6c757d" /></span>{release_date}</p>
                             <br></br>
+                            {
+
+                            }
                             <p>{overview}</p>
                         </Modal.Body>
                         <Modal.Footer>
