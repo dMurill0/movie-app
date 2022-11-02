@@ -14,7 +14,7 @@ function App() {
     fetch(API_URL)
       .then((res) => res.json())
       .then(data => {
-        console.log(data);
+        //console.log(data);
         setMovies(data.results);
       })
   }, [])
@@ -24,14 +24,9 @@ function App() {
     e.preventDefault();
     console.log("Searching");
     try {
-      const url = `https://api.themoviedb.org/3/search/movie?api_key=1976c380dd1c386feb7c2778eef34284&query=${query}`;
+      const url = `https://api.themoviedb.org/3/search/movie?api_key=1976c380dd1c386feb7c2778eef34284&query=${query}&language=es-ES`;
       const res = await fetch(url);
       const data = await res.json();
-      console.log(data);
-      // console.log(data.id);
-      // const API_SRCH = "https://api.themoviedb.org/3/movie/${data.id}?api_key=1976c380dd1c386feb7c2778eef34284&language=es"
-      // const res2 = await fetch(API_SRCH);
-      //const data2 = await res.json();
       setMovies(data.results);
     }
     catch (e) {
@@ -47,7 +42,7 @@ function App() {
       <Navbar bg="dark" expand="lg" variant="dark">
         <Container fluid>
           <div className='title'>
-            <a href='/index.html'><h1>MOVIEDB</h1></a>
+            <h1><a className="logo" href='/index.html'>MOVIEDB</a></h1>
           </div>
 
           <Navbar.Toggle aria-controls="navbarScroll"></Navbar.Toggle>

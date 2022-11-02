@@ -44,3 +44,18 @@ p {
   padding: 2%;
   background-color: rgba(134, 118, 118, 0.1);
 }
+.logo {
+  transition: all 1s;
+  color: #d1fb37;
+  -webkit-text-stroke: 0.5px #0dcaf0;
+}
+.logo:hover {
+  color: #0dcaf0;
+  -webkit-text-stroke: 0.5px #d1fb37;
+}
+.score {
+  margin: 5px;
+}
+.no-image {
+  box-shadow: none;
+}
