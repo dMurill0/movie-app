@@ -28,6 +28,10 @@ function App() {
       const res = await fetch(url);
       const data = await res.json();
       console.log(data);
+      // console.log(data.id);
+      // const API_SRCH = "https://api.themoviedb.org/3/movie/${data.id}?api_key=1976c380dd1c386feb7c2778eef34284&language=es"
+      // const res2 = await fetch(API_SRCH);
+      //const data2 = await res.json();
       setMovies(data.results);
     }
     catch (e) {
@@ -43,7 +47,7 @@ function App() {
       <Navbar bg="dark" expand="lg" variant="dark">
         <Container fluid>
           <div className='title'>
-            <a href=''><h1>MOVIEDB</h1></a>
+            <a href='/index.html'><h1>MOVIEDB</h1></a>
           </div>
 
           <Navbar.Toggle aria-controls="navbarScroll"></Navbar.Toggle>
@@ -72,6 +76,7 @@ function App() {
           <div className="container">
             <div className="grid">
               {movies.map((movieReq) =>
+
                 <MovieBox key={movieReq.id} {...movieReq} />)}
             </div>
           </div>
