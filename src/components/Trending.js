@@ -3,6 +3,7 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import MovieBox from './MovieBox';
+import SerieBox from './SerieBox';
 
 const API_URL = "https://api.themoviedb.org/3/trending/all/day?api_key=1976c380dd1c386feb7c2778eef34284&language=es";
 
@@ -30,8 +31,12 @@ const Trending = () => {
                     <div className="container p-lg-2">
                         <div className="grid">
                             {content.map((movieReq) =>
-
-                                <MovieBox key={movieReq.id} {...movieReq} />)}
+                                movieReq.release_date != null ? (
+                                    <MovieBox key={movieReq.id} {...movieReq} />
+                                ) : (
+                                    <SerieBox key={movieReq.id} {...movieReq} />
+                                )
+                            )}
                         </div>
                     </div>
                 ) : (
