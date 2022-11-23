@@ -38,13 +38,11 @@ h2 {
 .title h1 {
   font-family: "Patua One", cursive;
   font-weight: bolder;
-  margin-left: 32vw;
   color: rgb(255, 171, 3);
   -webkit-text-stroke: 0.5px white;
   transition: all 1s;
   border-style: groove;
   border-color: #0dcaf0;
-  padding: 3px;
 }
 .title h1:hover {
   color: #0dcaf0;

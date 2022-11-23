@@ -44,6 +44,7 @@ p {
   padding: 2%;
   background-color: rgba(134, 118, 118, 0.1);
 }
+
 .logo {
   transition: all 1s;
   color: #d1fb37;
@@ -81,4 +82,17 @@ p {
 }
 .inputs input {
   background-color: #d1fb37;
+}
+#navLink {
+  color: gray;
+  text-decoration: none;
+  margin-right: 2rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+#navLink:hover{
+  color: white;
+}
+.active {
+  color: gray;
 }

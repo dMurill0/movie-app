@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarDays } from '@fortawesome/free-solid-svg-icons'
 const API_IMG = "https://image.tmdb.org/t/p/w500/";
 
-const MovieBox = ({ id, title, poster_path, vote_average, release_date, overview }) => {
+const SerieBox = ({ id, title, poster_path, vote_average, first_air_date
+    , overview }) => {
 
     const [show, setShow] = useState(false);
     const handleShow = () => setShow(true);
@@ -55,7 +56,8 @@ const MovieBox = ({ id, title, poster_path, vote_average, release_date, overview
                                 ))
                             }
 
-                            <h5>Fecha de Estreno: </h5><p><span style={{ marginRight: "15px", fontSize: "1.5vw" }}><FontAwesomeIcon icon={faCalendarDays} color="#6c757d" /></span>{release_date}</p>
+                            <h5>Fecha de Estreno: </h5><p><span style={{ marginRight: "15px", fontSize: "1.5vw" }}><FontAwesomeIcon icon={faCalendarDays} color="#6c757d" /></span>{first_air_date
+                            }</p>
                             <br></br>
                             {
                                 //console.log(id + title)
@@ -73,4 +75,4 @@ const MovieBox = ({ id, title, poster_path, vote_average, release_date, overview
         </div>
     )
 }
-export default MovieBox;
+export default SerieBox;
