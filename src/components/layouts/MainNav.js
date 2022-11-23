@@ -46,7 +46,7 @@ const MainNav = () => {
         <Container fluid className='justify-content-between mx-auto px-auto'>
           {/* LOGO */}
           <div className='title '>
-            <h1 className='ml-auto'><a className="logo ml-auto" href='/index.html'>MOVIEDB</a></h1>
+            <h1 className='ml-auto'><a className="logo ml-auto" href='/'>MOVIEDB</a></h1>
           </div>
           {/* MENU */}
           <div className="" id='navbarCollapse'>
